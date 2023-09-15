@@ -13,4 +13,9 @@ app.use('/films', createProxyMiddleware({
   changeOrigin: true
 }))
 
+app.use('/planets', createProxyMiddleware({
+  target: 'http://localhost:8003',
+  changeOrigin: true
+}))
+
 app.listen(8000)
